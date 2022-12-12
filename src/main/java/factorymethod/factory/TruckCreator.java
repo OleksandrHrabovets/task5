@@ -5,7 +5,7 @@ import factorymethod.transport.Truck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TruckCreator implements Creator{
+public class TruckCreator extends Creator {
     private static final Logger LOG = LoggerFactory.getLogger(TruckCreator.class);
 
     @Override
