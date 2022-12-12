@@ -1,9 +1,9 @@
 package abstractfactory;
 
 import abstractfactory.factory.BankReportFactory;
+import abstractfactory.factory.FileFormatFactory;
 import abstractfactory.factory.JsonReportFactory;
 import abstractfactory.factory.XmlReportFactory;
-import abstractfactory.format.Format;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,14 +13,14 @@ public class App {
     public static void main(String[] args) {
         LOG.info("Start application...");
 
-        Format format1 = new BankReportFactory().createFormat();
-        format1.save();
+        FileFormatFactory factory = new BankReportFactory();
+        factory.createFormat().save(factory.createType());
 
-        Format format2 = new JsonReportFactory().createFormat();
-        format2.save();
+        FileFormatFactory factory2 = new JsonReportFactory();
+        factory2.createFormat().save(factory2.createType());
 
-        Format format3 = new XmlReportFactory().createFormat();
-        format3.save();
+        FileFormatFactory factory3 = new XmlReportFactory();
+        factory3.createFormat().save(factory3.createType());
 
     }
 

@@ -1,5 +1,7 @@
 package abstractfactory.format;
 
+import abstractfactory.typereport.TypeReport;
+
 public interface Format {
-    void save();
+    void save(TypeReport typeReport);
 }
