@@ -8,20 +8,8 @@ import org.slf4j.LoggerFactory;
 public class Truck extends Vehicle {
     private static final Logger LOG = LoggerFactory.getLogger(Truck.class);
 
-    private final Producer producer;
-    private final Color color;
-
     public Truck(Producer producer, Color color) {
-        this.producer = producer;
-        this.color = color;
-    }
-
-    public Producer getProducer() {
-        return producer;
-    }
-
-    public Color getColor() {
-        return color;
+        super(producer, color);
     }
 
     @Override

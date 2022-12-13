@@ -7,20 +7,9 @@ import org.slf4j.LoggerFactory;
 
 public class Car extends Vehicle {
     private static final Logger LOG = LoggerFactory.getLogger(Car.class);
-    private final Producer producer;
-    private final Color color;
 
     public Car(Producer producer, Color color) {
-        this.producer = producer;
-        this.color = color;
-    }
-
-    public Producer getProducer() {
-        return producer;
-    }
-
-    public Color getColor() {
-        return color;
+        super(producer, color);
     }
 
     @Override
