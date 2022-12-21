@@ -1,14 +1,20 @@
 package singleton;
 
 public class SimpleSingleton {
-    private static SimpleSingleton instance;
+    private static final SimpleSingleton instance;
 
-    private SimpleSingleton() {}
-
-    public static synchronized SimpleSingleton getInstance() {
-        if (instance == null) {
+    static {
+        try {
             instance = new SimpleSingleton();
+        } catch (Exception e) {
+            throw new RuntimeException("ERROR");
         }
+    }
+
+    private SimpleSingleton() {
+    }
+
+    public static SimpleSingleton getInstance() {
         return instance;
     }
 }

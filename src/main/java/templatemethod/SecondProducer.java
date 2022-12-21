@@ -9,6 +9,7 @@ public class SecondProducer extends Producer{
     @Override
     void makeMainOperation() {
         // no main operation
+        LOG.info("SKIP");
     }
 
     @Override

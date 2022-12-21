@@ -14,5 +14,6 @@ public class MainProducer extends Producer{
     @Override
     void makeSecondOperation() {
         // no second operation
+        LOG.info("SKIP");
     }
 }
